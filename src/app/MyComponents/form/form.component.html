@@ -1,0 +1,78 @@
+<app-navbar></app-navbar>
+
+
+<div class="flex items-center justify-center p-12">
+    <div class="mx-auto w-full max-w-[550px] bg-white">
+        <form class="py-6 px-9" [formGroup]="myForm" class="py-6 px-9" (ngSubmit)="handleSubmit()">
+            <div class="flex">
+                <div class="mb-5 mr-2">
+                    <label for="name" class="mb-3 block text-base font-medium text-[#07074D]">
+                        First Name
+                    </label>
+                    <input type="text" formControlName="firstName" id="firstName" placeholder="First Name"
+                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                </div>
+                <div class="mb-5">
+                    <label for="lastName" class="mb-3 block text-base font-medium text-[#07074D]">
+                        Last Name
+                    </label>
+                    <input type="text" formControlName="lastName" id="lastName" placeholder="Last Name"
+                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                </div>
+            </div>
+            <!-- email -->
+            <div class="mb-5">
+                <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
+                    Enter Your email Here 
+                </label>
+                <input type="email" formControlName="email" id="email" placeholder="example@domain.com"
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
+            <!-- mobile number -->
+            <div class="mb-5">
+                <label for="mobile" class="mb-3 block text-base font-medium text-[#07074D]">
+                    Contact Number
+                </label>
+                <input type="text" formControlName="mobileNumber" id="mobile" placeholder="9876543210"
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
+            <!-- date and time -->
+            <div class="mb-5">
+                <label for="Date" class="mb-3 block text-base font-medium text-[#07074D]">
+                    Select Appointment Date
+                </label>
+                <input type="date" formControlName="selectDate" id="selectDate" 
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            </div>
+            <!-- checkbox -->
+            
+            <!-- <div class="mb-6 pt-4">
+                <label class="mb-5 block text-xl font-semibold text-[#07074D]">Upload File</label>
+                <div class="mb-8">
+                    <input type="file" name="imageFile" id="imageFile" (change)="onFileSelected($event)" class="sr-only" />
+                    <label for="imageFile"
+                        class="relative flex min-h-[200px] items-center justify-center rounded-md border border-dashed border-[#e0e0e0] p-12 text-center">
+                        <div>
+                            <span class="mb-2 block text-xl font-semibold text-[#07074D]">Drop files here</span>
+                            <span class="mb-2 block text-base font-medium text-[#6B7280]">Or</span>
+                            <span class="inline-flex rounded border border-[#e0e0e0] py-2 px-7 text-base font-medium text-[#07074D]">Browse</span>
+                        </div>
+                    </label>
+                    <div *ngIf="selectedFile">{{ selectedFile.name }}</div>
+                </div>
+            </div>
+             -->
+            <!-- <div class="m-10">
+                <input type="file" (change)="onFileSelected($event)" formControlName="imageFile" />
+
+            </div> -->
+
+            <div>
+                <button type="submit"
+                    class="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">
+                    Send File
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
